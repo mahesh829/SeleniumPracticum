@@ -34,7 +34,7 @@ namespace SuncorePracticum
 
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddArgument("disable-infobars");
-            webDriver = new ChromeDriver(@"C:\Practicum\chromedriver_win32 (1)\", chromeOptions);
+            webDriver = new ChromeDriver(@"C:\Github\SuncorePracticum\SuncorePracticum.Test\TestData\", chromeOptions);
 
             webDriver.Navigate().GoToUrl("https://www.saucedemo.com/");
             webDriver.Manage().Window.Maximize();
@@ -119,7 +119,7 @@ namespace SuncorePracticum
         [TestMethod]
         public void Scenario3()
         {
-            string path = @"..\..\..\SuncorePracticum.Test\TestData\Items.csv";
+            string path = @"C:\Github\SuncorePracticum\SuncorePracticum.Test\TestData\Items.csv";
             Console.WriteLine(Environment.CurrentDirectory);
             LoginPage login = new LoginPage(webDriver);
             WebUtilities webutil = new WebUtilities(webDriver);
